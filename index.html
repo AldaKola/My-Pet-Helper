@@ -4,13 +4,123 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
     <title>My Pet Helper</title>
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <link rel="stylesheet" href="/scss/style.css">
+
 </head>
 <body>
-    <h1>My Pet Helper!</h1>
+    <!-- Header Start -->
+    <header class="header">
+        <a href="#" class="logo">My <i class="fas fa-paw"></i> Helper</a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#about">about us</a>
+            <a href="#services">services</a>
+            <a href="#register">register</a>
+            <a href="#contactus">contact us</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <a href="#" class="fas fa-shopping-cart"></a>
+            <div class="fas fa-user" id="login-btn"></div>
+        </div>
+
+        <form action="" class="login-form">
+            <h3>sign in</h3>
+            <input type="email" name="" placeholder="enter your email" id="" class="box">
+            <input type="password" name="" placeholder="enter your password" class="box">
+            <div class="remember">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">remember me</label>
+            </div>
+            <input type="submit" value="sign in" class="btn">
+            <div class="links">
+                <a href="#">forget password</a>
+                <a href="#">sign up</a>
+            </div>
+        </form>
+
+    </header>
+    <!-- Header End -->
+
+    <!-- home section start -->
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3><span>hi</span> welcome to my pet helper! </h3>
+            <a href="#" class="btn">try premium</a>
+        </div>
+        <img src="img/bottom_wave.png" class="wave" alt="">
+    </section>
+    <!-- home section ends -->
+
+    <!-- about section starts -->
+    <section class="about" id="about">
+        <div class="image">
+            <img  src="img/dog-g7dcbb34e0_1920.jpg" alt="">
+        </div>
+
+        <div class="premium">
+            <h3>get premium <span> subscription</span> now</h3>
+            <p>You will be able to chat in real time with our veteriner for really helpful tips on any kind of question you have for your little friend.
+            </p>
+                <a href="#" class="btn">read more</a>
+        </div>
+    </section>
+    <!-- about section ends -->
+
+
+    <!-- banner section starts-->
+        <div class="dog">
+            <div class="image">
+                <img src="img/margarita-kosior-9TiLF6KfadI-unsplash.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>A new <span>home</span> for our bestfriends.</h3>
+                <p>Abandoned animals deserve to be given a home and the warmth of a loving family.
+                    You can be their second chance.</p>
+                    <a href="#"><img style="width:20%" src="/logo/paws1.png" alt="logo"></a>
+                
+            </div>
+        </div>
+
+        <div class="cat">
+            <div class="content">
+                <h3>A <span>second</span> chance</h3>
+                <p>Be aware of the responasability of having a pet. They need attention, care and love. </p>
+                <a href="#"><img style="width:20%" src="/logo/paws1.png" alt="logo"></a>
+            </div>
+            <div class="image">
+                <img src="img/edgar-nKC772R_qog-unsplash.jpg" alt="">
+            </div>
+        </div>
+    <!-- banner section ends -->
+
+
+
+    <!-- <h1>My Pet Helper!</h1>
     <div class="logo">
         <img style="width:2%" src="/logo/paws1.png" alt="logo">
-    </div>
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Custom js  -->
+    <script src="/js/script.js"></script>
 </body>
 </html>
