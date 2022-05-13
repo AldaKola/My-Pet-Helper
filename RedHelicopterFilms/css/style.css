@@ -350,67 +350,99 @@ section {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 2rem;
-}
-.image{
-  flex: 1 1 40rem;
+  padding: 2rem 0;
 }
 
-.image img{
-  width:100%;
-  border-radius: 12px;
+.dog .image,
+.cat .image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
 }
-.content{
-  flex: 1 1 40rem;
+
+.dog .image img,
+.cat .image img {
+  width: 100%;
+}
+
+.dog .content,
+.cat .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
   text-align: center;
   padding: 2rem;
 }
-.content h3{
+
+.dog .content h3,
+.cat .content h3 {
   font-size: 3.5rem;
   color: #130f40;
-
 }
-.content span{
+
+.dog .content span,
+.cat .content span {
   color: #e67e22;
 }
-p{
+
+.dog p,
+.cat p {
   padding: 1rem 0;
   line-height: 2;
   color: #666;
   font-size: 1.5rem;
 }
-.amount{
+
+.dog .amount,
+.cat .amount {
   font-size: 3.5rem;
   color: #130f40;
   padding: .5rem 0;
 }
-a img{
-      height: 15rem;
-      margin-top: 1rem;
-  }
-a:hover img{
-  transform: rotate(15deg);
+
+.dog a img,
+.cat a img {
+  height: 15rem;
+  margin-top: 1rem;
 }
 
-.services .box-container{
-  @include grid(30rem);
+.dog a:hover img,
+.cat a:hover img {
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
 }
 
-.services .box{
+.cat {
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+.services .box-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.services .box-container .box {
   background: #eee;
   padding: 3rem;
   text-align: center;
   border-radius: 33% 67% 70% 30% / 30% 30% 70% 70%;
 }
-.sevices .box:nth-child(even){
+
+.services .box-container .box:nth-child(even) {
   border-radius: 79% 21% 81% 19% / 58% 93% 7% 42%;
 }
-.services .box:hover{
+
+.services .box-container .box:hover {
   border-radius: .5rem;
 }
-.services i{
+
+.services .box-container .box i {
   height: 6.5rem;
-  width:6.5rem;
+  width: 6.5rem;
   line-height: 6.5rem;
   font-size: 3rem;
   color: #fff;
@@ -419,61 +451,50 @@ a:hover img{
   margin-bottom: .5rem;
 }
 
-.services h3{
+.services .box-container .box h3 {
   font-size: 2.2rem;
   color: #130f40;
   padding: .5rem 0;
 }
-.services h1{
-  font-size: 3.5rem;
-  color: #130f40;
-  text-align: center;
-  padding-bottom: 2rem;
 
-}
-.services span{
-  color: #e67e22;
-}
-
-.contact{
+.contact {
   padding: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 3rem;
 }
-.contact .image{
-  flex: 1 1 40rem;
-}
-.contact .image img{
-    width:100%;
-  }
-.contact form{
-  flex: 1 1 40rem;
-  padding: 2rem 7%;
-}
-h3{
-  font-size: 3rem;
-  padding-bottom: 1rem;
-  color:#130f40;
-}
-.box{
-  width: 100%;
-  border-bottom: solid black;
-  border-width: .1rem;
-  font-size: 1.6rem;
-  text-transform: none;
-  color: #130f40;
-  padding:1.5rem;
-}
-.contact .btn{
-  width: 100%;
-text-align: center;
-}
-.contact .btn:hover{
-   background: #130f40; 
+
+.contact .image {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
 }
 
+.contact .image img {
+  width: 100%;
+}
+
+.contact form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  padding: 2rem 7%;
+}
+
+.contact form .btn {
+  width: 100%;
+  text-align: center;
+}
+
+.contact form .btn:hover {
+  background: #130f40;
+}
 
 @media (max-width: 991px) {
   html {

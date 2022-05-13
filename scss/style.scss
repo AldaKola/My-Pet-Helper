@@ -297,9 +297,116 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    padding: 2rem 0;
+    
+    .image{
+    flex: 1 1 40rem;
+
+    img{
+        width:100%;
+    }
+}
+.content{
+    flex: 1 1 40rem;
+    text-align: center;
+    padding: 2rem;
+
+    h3{
+        font-size: 3.5rem;
+        color: $black;
+    }
+    span{
+        color: $carrot-color;
+    }
+}
+
+    p{
+        padding: 1rem 0;
+        line-height: 2;
+        color: $light-color;
+        font-size: 1.5rem;
+    }
+    .amount{
+        font-size: 3.5rem;
+        color: $black;
+        padding: .5rem 0;
+    }
+
+    a{
+        img{
+            height: 15rem;
+            margin-top: 1rem;
+        }
+
+        &:hover img{
+            transform: rotate(15deg);
+        }
+    }
 
 }
+
+.cat{
+    flex-wrap: wrap-reverse;
+}
+
+.services .box-container{
+    @include grid(30rem);
+
+    .box{
+        background: $light-bg;
+        padding: 3rem;
+        text-align: center;
+        border-radius: 33% 67% 70% 30% / 30% 30% 70% 70%;
+
+        &:nth-child(even){
+            border-radius: 79% 21% 81% 19% / 58% 93% 7% 42%;
+        }
+        &:hover{
+            border-radius: .5rem;
+        }
+        i{
+            height: 6.5rem;
+            width:6.5rem;
+            line-height: 6.5rem;
+            font-size: 3rem;
+            color: $white;
+            background: $carrot-color;
+            border-radius: 50%;
+            margin-bottom: .5rem;
+        }
+        h3{
+            font-size: 2.2rem;
+            color: $black;
+            padding: .5rem 0;
+        }
+    }
+}
+
+.contact{
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+    .image{
+        flex: 1 1 40rem;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    form{
+        flex: 1 1 40rem;
+        padding: 2rem 7%;
+
+        .btn{
+            @include form-btn();
+        }
+    }
+}
+
 
 
 
